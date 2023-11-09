@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+<b>Hi {{ name }}, you're {{ age }}</b>
 
+<h1>Children</h1>
+
+{{ children }}
+
+<hr>
+{% for child in children %}
+    Children's data:
+    <br>
+{% for key, value in child.items %}
+     {{ key }}: {{ value }}
+<br>
+
+{% endfor %}
+{% endfor %}
+
+<hr>
+{% if age == 34  %}
+    This child is 34 years old
+{% endif %}
+<hr>
+{% if age == 35  %}
+    This child is 34 years old
+{% endif %}
 </body>
 </html>
